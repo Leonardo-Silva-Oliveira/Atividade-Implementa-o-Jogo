@@ -10,16 +10,23 @@ public class Raycast : MonoBehaviour
     float velocidadeprojetil;
     [SerializeField]
     Transform posicaoprojetil;
+    [SerializeField]
+    Transform castPoint;
+    void Start(){
+    }
 
     // Update is called once per frame
     void Update(){
-        if(Input.GetKeyDown("q")){
-            Atirar();
+
+
+        RaycastHit2D hit = Physics2D.Raycast(castPoint.position, Vector2.left);
+        if(hit.collider != null){
+            Debug.Log("Acertou");
         }
+
     }
     void Atirar(){
         Rigidbody2D prefab = Instantiate(projetil, posicaoprojetil.transform.position, posicaoprojetil.transform.localRotation);
-        prefab.velocity = -transform.right * (velocidadeprojetil * Time.deltaTime);
+        prefab.velocity = -transform.right * (velocidadeprojetil * Time.deltaTime * 2);
     }
-
 }
