@@ -25,7 +25,6 @@ public class Raycast : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(posicaoprojetil.position, Vector2.left, 10.0f);
         if(hit.collider != null){
-            Debug.Log("Acertou");
             playercheck = true;
             intervalotiro = intervalotiro + Time.deltaTime;
         }
@@ -43,6 +42,8 @@ public class Raycast : MonoBehaviour
     void Atirar(){
 
         Rigidbody2D prefab = Instantiate(projetil, posicaoprojetil.transform.position, posicaoprojetil.transform.localRotation);
-        prefab.velocity = -transform.right * (velocidadeprojetil * Time.deltaTime * 2);
+        prefab.velocity = -transform.right * (velocidadeprojetil/300);
+        Debug.Log(velocidadeprojetil);
+        Debug.Log(Time.deltaTime);
     }
 }
