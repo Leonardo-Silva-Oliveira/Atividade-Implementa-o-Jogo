@@ -29,11 +29,11 @@ public class Movimento : MonoBehaviour
             SceneManager.LoadScene(Cena);
         }
         if(Input.GetKey("d")){
-            m.x = 0.03f;
+            m.x = 0.01f;
             Movimentacao(m);
         }
                 if(Input.GetKey("a")){
-            m.x = -0.03f;
+            m.x = -0.01f;
             Movimentacao(m);
         }
         if(Input.GetKey("space")){

@@ -11,7 +11,7 @@ public class Raycast : MonoBehaviour
     [SerializeField]
     Transform posicaoprojetil;
 
-    bool playercheck;
+    public bool playercheck;
     float intervalotiro;
     void Start(){
         playercheck = false;
@@ -23,7 +23,7 @@ public class Raycast : MonoBehaviour
 
 
 
-        RaycastHit2D hit = Physics2D.Raycast(posicaoprojetil.position, Vector2.left, 10.0f);
+        RaycastHit2D hit = Physics2D.Raycast(posicaoprojetil.position, Vector2.left, 10.0f, 1 << LayerMask.NameToLayer("Player"));
         if(hit.collider != null){
             playercheck = true;
             intervalotiro = intervalotiro + Time.deltaTime;
@@ -43,7 +43,5 @@ public class Raycast : MonoBehaviour
 
         Rigidbody2D prefab = Instantiate(projetil, posicaoprojetil.transform.position, posicaoprojetil.transform.localRotation);
         prefab.velocity = -transform.right * (velocidadeprojetil/300);
-        Debug.Log(velocidadeprojetil);
-        Debug.Log(Time.deltaTime);
     }
 }

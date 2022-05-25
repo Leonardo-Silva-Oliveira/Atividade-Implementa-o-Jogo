@@ -585,6 +585,7 @@ MonoBehaviour:
   projetil: {fileID: 334790344762723927, guid: eebe616bb2eefde42aac360c8aaaecb8, type: 3}
   velocidadeprojetil: 1000
   posicaoprojetil: {fileID: 227303855}
+  playercheck: 0
 --- !u!1 &1197208621
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,10 +626,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -763,7 +764,7 @@ GameObject:
   - component: {fileID: 1553383666}
   - component: {fileID: 1553383665}
   - component: {fileID: 1553383669}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Player
   m_Icon: {fileID: 0}
