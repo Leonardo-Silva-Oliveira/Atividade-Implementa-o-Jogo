@@ -9,9 +9,9 @@ public class Rotacao : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        a.x = 0.3f;
-        a.y = 0.3f;
-        a.z = 0.3f;
+        a.x = 0.0f;
+        a.y = 0.0f;
+        a.z = 0.2f;
     }
 
     // Update is called once per frame
